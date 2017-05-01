@@ -1,7 +1,8 @@
-import java.util.Vector;
-import java.util.Random;
-import structure5.*;
 /**
+*
+* Konnor A. Herbst (HackerMan)
+* Eddy D. Varela (Deputy)
+*
 * Thought Questions:
 *  1. After running several tests, the queue strategy that runs the fastest
 * was the single line queue. With a small amout of cusomters, it wasn't noticeable
@@ -21,13 +22,22 @@ import structure5.*;
 * might be useful in getting the first/last customers in the line and move them around
 * until all the lines are balanced.
 *
-* 4.If there were lines for shorter timed customers then customers that had lower serviceTimes
+* 4.If there were lines for shorter timed customers then, customers that had lower serviceTimes
 * would be able to get attended quickly and not have to wait in line behind someone that
-* is going to take a really long time. On average, if everyone is sorted by their service times,
-* the lower bound of the average wait time will be significantly shorter than the previous
-* fastest time and so the average will be lower than before.
+* is going to take a really long time. In the single line implementation if the tellers were
+* partitioned to take only the specific times then this may be inefficient because what if
+* all the tellers that take long service times are occupied and there is one long serviceTime
+* customer in front of several short serviceTime customers? This would be very annoying and pretty
+* inefficient. In the multiple line implementation, if everyone is sorted by their service times,
+* into respective lines, the lower bound of the average wait time will be significantly shorter
+* than the previous fastest time and so the average will be lower than before so this implementation
+* will be more efficient thus favorable.
+*
 **/
 
+import java.util.Vector;
+import java.util.Random;
+import structure5.*;
 
 public abstract class BusinessSimulation {
 

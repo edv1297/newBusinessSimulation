@@ -1,3 +1,6 @@
+//Konnor A. Herbst (HackerMan)
+//Eddy D. Varela (Deputy)
+
 import structure5.*;
 
 public class Customer implements Comparable<Customer> {
