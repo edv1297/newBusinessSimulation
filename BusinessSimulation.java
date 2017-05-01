@@ -103,9 +103,4 @@ public abstract class BusinessSimulation {
 	}
 	return str;
     }
-
-    public static void main(String[] args){
-	PriorityQueue<Customer> eveQ = generateCustomerSequence(9,10,5);
-	System.out.println(eveQ.toString());
-    }
 }
