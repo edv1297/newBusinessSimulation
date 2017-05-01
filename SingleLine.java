@@ -86,21 +86,22 @@ public class SingleLine extends BusinessSimulation{
 
 
 
-    return "Tellers/Customers currently at Tellers: " + tellers + "Customers in line: " + this.customers.toString();
+    return "Tellers/Customers currently at Tellers: " + tellers + "\n" + "Customers in line: " + this.customers.toString();
   }
   public static void main(String[] args){    
-    SingleLine line = new SingleLine(5, 2, 100, 2);
-    line.step();
-    System.out.println(line.toString());
-    line.step(9);
-    System.out.println(line.toString());
-    /*	while(!line.step()){
-    +	    System.out.println(line.toString());
-    +	    System.out.println("--------");
-    +	    }*/
+    SingleLine line = new SingleLine(9, 2, 10, 5);
+    //System.out.println(line.customers);
+    //    line.step();
+    // System.out.println(line.toString());
+    // line.step(9);
+    // System.out.println(line.toString());
+    	while(!line.step()){
+    	    System.out.println(line.toString());
+    	    System.out.println("--------");
+    	    }
     //I want to find a way to actually get through the customers at the teller their time is up
     //I want to add the last customers serviceTime to this total
-    System.out.println("The total time it took to process our customers was: " + line.time);
+    // System.out.println("The total time it took to process our customers was: " + line.time);
   }
 }
 

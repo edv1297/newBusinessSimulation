@@ -62,7 +62,7 @@ public abstract class BusinessSimulation {
 	Random generator = new Random(seed);
 	VectorHeap<Customer> evQ = new VectorHeap<Customer>();
 	for(int customer = 1; customer <= numCustomers; customer++){	    
-	    evQ.add(new Customer(generator.nextInt(maxEventStart), 10));
+	    evQ.add(new Customer(generator.nextInt(maxEventStart), generator.nextInt(MAX_SERVICE_TIME) + MIN_SERVICE_TIME));
 	}			   
 	return evQ;
     }
@@ -105,7 +105,7 @@ public abstract class BusinessSimulation {
     }
 
     public static void main(String[] args){
-	PriorityQueue<Customer> eveQ = generateCustomerSequence(10,3,3);
+	PriorityQueue<Customer> eveQ = generateCustomerSequence(9,10,5);
 	System.out.println(eveQ.toString());
     }
 }
