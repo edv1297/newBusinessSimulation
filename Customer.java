@@ -35,6 +35,6 @@ public class Customer implements Comparable<Customer> {
 	System.out.println(c2.compareTo(c1));
 	System.out.println(c1.toString());
 	System.out.println(c2.toString());
-	
+
     }
 }
