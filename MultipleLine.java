@@ -55,8 +55,13 @@ public class MultipleLine extends BusinessSimulation{
 
     private boolean isEmpty(){
 	boolean empty= true;
-	for(int x=0; x<)
-       
+	for(Customer[]temp: superMarket){
+	    for(Customer cust:temp){
+		if(cust!=null){
+		    empty = false;
+		}
+	    }
+	}return empty;
     }
     @Override
     public String toString(){
@@ -81,6 +86,10 @@ public class MultipleLine extends BusinessSimulation{
     
     public static void main (String[] args){
 	MultipleLine market = new MultipleLine(9, 2, 10, 5);
+	MultipleLine emptyMarket = new MultipleLine(0,2,4,1);
 	System.out.println(market);
+	
+	System.out.println("emptyMarket, should be true " + emptyMarket.isEmpty());
+	System.out.println("market should be false" + market.isEmpty());
     }
 }
